@@ -1,0 +1,18 @@
+# Arquivos e diretórios a serem ignorados pelo Git
+
+# Arquivos Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos de ambiente virtual
+venv/
+env/
+
+# Arquivo de configuração
+config.py
+
+# Logs e caches
+logs/
+.cache/
