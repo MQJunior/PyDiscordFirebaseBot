@@ -10,7 +10,7 @@ class MemberJoinCog(commands.Cog):
         print(f'Novo Membro adicionado...{member.name}')
         
         # Canal de boas-vindas (substitua 'ID_DO_CANAL' pelo ID real do canal)
-        welcome_channel = self.bot.get_channel(1195077400183177346)
+        welcome_channel = self.bot.get_channel()
         
         if welcome_channel:
             print(f"Canal de boas-vindas encontrado: {welcome_channel.name} ({welcome_channel.id})")
