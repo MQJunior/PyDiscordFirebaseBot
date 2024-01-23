@@ -12,7 +12,12 @@ env/
 
 # Arquivo de configuração
 config.py
+credentials.json
 
 # Logs e caches
 logs/
 .cache/
+bot.log
+
+# Arquivo de Anotacoes
+anotacoes.txt
