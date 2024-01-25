@@ -1,5 +1,6 @@
 from discord.ext import commands
 from utils.discord_utils import obter_lista_canais
+from utils.firebase_utils import set_channel_log_id
 
 class ConfigCog(commands.Cog):
     def __init__(self, bot):
@@ -39,7 +40,7 @@ class ConfigCog(commands.Cog):
             canal_escolhido = canais_disponiveis[indice_canal_escolhido]
 
             # Salva o canal de logs no Firebase
-            #salvar_canal_log(canal_escolhido.id)
+            set_channel_log_id(canal_escolhido.id)
             await ctx.send(f"Canal de logs definido como {canal_escolhido.mention}.")
         except TimeoutError:
             await ctx.send("Tempo esgotado. O comando foi cancelado.")

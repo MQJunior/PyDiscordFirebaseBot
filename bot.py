@@ -8,9 +8,12 @@ import logging
 
 from conf.languages import LANGUAGES
 from conf import logger_config
-from conf.lang_config import *
-from utils.language_utils import set_language, get_language
+from utils.language_utils import set_language, get_language, get_language_value
 
+from utils.firebase_utils import check_setup_collection
+
+#os.system('cls')
+set_language(1, LANGUAGES)  
 
 intents = discord.Intents.all()
 
@@ -28,7 +31,7 @@ class CustomHelpCommand(commands.HelpCommand):
 
         # Adicionando a seção de idiomas
         language_list = "\n".join([f"{option} - {lang['name']} ({lang['code']})" for option, lang in self.language_options.items()])
-        language_section = f"**{get_language_value('command_help_set_language')}**: `/listlanguages` - {get_language_value('command_help_set_language')}\n{language_list}\n\n"
+        language_section = f"**{get_language_value('command_help_set_language')}**: `/listlanguages` - {get_language_value('command_list_languages')}\n{language_list}\n\n"
 
         embed = discord.Embed(
             title=get_language_value('help_title'),
@@ -87,6 +90,13 @@ async def setup_bot():
             await aiohttp.ClientSession.close()
         except Exception as e:
             logging.error(f'Erro ao fechar a sessão aiohttp: {e}')
+
+
+# Vefiricando se o Setup do Firebase existe
+if check_setup_collection():
+    print('Setup Definido')
+else:
+    print('Setup Não Definido')
 
 if __name__ == "__main__":
     asyncio.run(setup_bot())

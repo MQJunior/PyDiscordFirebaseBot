@@ -1,10 +1,10 @@
 # /utils/language_utils.py
 
 from conf.languages import LANGUAGES
-from conf.lang_config import *
 import logging
 
 def get_language():
+    global current_language
     return LANGUAGES.get(current_language, LANGUAGES[1])  # Padrão para Português se não estiver definido
 
 
@@ -18,7 +18,6 @@ def get_language_value(p_key:str):
 
 def set_language(new_language, language_options=LANGUAGES):
     language = language_options.get(new_language)
-    
     if language:
         global current_language
         current_language = new_language
@@ -29,4 +28,4 @@ def set_language(new_language, language_options=LANGUAGES):
     else:
         logging.warning('Opção de idioma inválida.')
 
-set_language(2, LANGUAGES)  
+# set_language(2, LANGUAGES)  

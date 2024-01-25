@@ -13,7 +13,8 @@ LANGUAGES = {
         'load_cogs_error' :'Erro inesperado ao adicionar o cog',
         'language_utils_set_language' : 'Novo idioma definido: ',
         'command_help_set_language' : 'Seta o idioma',
-        'command_list_languages' : 'Idiomas disponíveis'
+        'command_list_languages' : 'Idiomas disponíveis',
+        'command_clear_help' : 'Limpa todas as mensagens do Canal'
         # Adicione mais mensagens conforme necessário
     },
     2: {
@@ -27,7 +28,8 @@ LANGUAGES = {
         'load_cogs_error' :'Unexpected error adding cog',
         'language_utils_set_language' : 'New language set: ',
         'command_help_set_language' : 'Set language',
-        'command_list_languages' : 'Available languages'
+        'command_list_languages' : 'Available languages',
+        'command_clear_help' : 'Clear all messages in the channel....'
     },
     3: {
         'code': 'es',
@@ -40,7 +42,8 @@ LANGUAGES = {
         'load_cogs_error' :'Error inesperado al agregar el cog',
         'language_utils_set_language' : 'Nuevo idioma definido: ',
         'command_help_set_language' : 'Establecer el idioma',
-        'command_list_languages' : 'Idiomas disponibles'
+        'command_list_languages' : 'Idiomas disponibles',
+        'command_clear_help' : '...',
         # Añade más mensajes según sea necesario
     },
     # Adicione mais idiomas conforme necessário
